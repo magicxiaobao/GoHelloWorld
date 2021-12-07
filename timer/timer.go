@@ -7,6 +7,11 @@ import (
 
 func main() {
 
+	date1 := time.Date(2021, 11, 1, 1, 1, 1, 1, time.UTC)
+	duration := date1.Sub(time.Now())
+	fmt.Println(duration.Hours())
+	date2 := date1.Add(-duration)
+	fmt.Println(date2)
 	timer1 := time.NewTimer(2 * time.Second)
 	l := <-timer1.C
 	fmt.Println("timer1 fired", l)

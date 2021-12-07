@@ -19,6 +19,7 @@ func main() {
 	students := []student{{"guoguo", 9}, {"suisui", 37}}
 	sort.Sort(studentByAge(students))
 	fmt.Println(students)
+
 }
 
 type student struct {
